@@ -4,92 +4,96 @@
 @media(max-width:900px){.nav nav{display:none}.hero,.split{grid-template-columns:1fr}.hero-art{height:350px;margin-top:60px}.cards,.skill-grid{grid-template-columns:1fr 1fr}.pubs{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.timeline>div{grid-template-columns:90px 1fr}footer{display:block}footer span{display:block;margin:5px 0}}
 @media(max-width:560px){.nav{padding:0 5vw}.cv-btn{display:none}.hero,.section{padding-left:6vw;padding-right:6vw}.hero h1{font-size:65px}.cards,.skill-grid{grid-template-columns:1fr}.timeline>div{grid-template-columns:1fr;gap:5px}.contact-links{flex-direction:column;gap:15px}}
 /* =========================================
-   HORIZONTAL RESEARCH CARDS
+   RESEARCH HORIZONTAL SCROLL
    ========================================= */
 
 .research-scroll {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    gap: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+  gap: 20px;
 
-    padding: 10px 5px 25px 5px;
+  width: 100%;
+  max-width: 100%;
+  
+  overflow-x: scroll;
+  overflow-y: hidden;
 
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+  padding: 5px 5px 25px 5px;
+
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
-/* Individual cards */
+/* Cards */
 .research-scroll article {
-    flex: 0 0 320px !important;
-    width: 320px;
-    min-height: 230px;
+  flex: 0 0 300px;
+  width: 300px;
+  min-width: 300px;
+  height: 280px;
 
-    padding: 30px;
+  background: var(--dark);
+  border: 1px solid #33403b;
 
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 12px;
+  padding: 32px;
 
-    background: rgba(255,255,255,0.03);
+  box-sizing: border-box;
 
-    box-sizing: border-box;
-
-    transition: all 0.3s ease;
+  transition: transform 0.3s ease,
+              border-color 0.3s ease;
 }
 
 .research-scroll article:hover {
-    transform: translateY(-6px);
-    border-color: #55d6be;
+  transform: translateY(-5px);
+  border-color: var(--accent);
 }
 
 /* Number */
 .research-scroll article span {
-    display: block;
-    margin-bottom: 20px;
-
-    color: #55d6be;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 2px;
+  display: block;
+  color: #9fda58;
+  font-size: 12px;
 }
 
 /* Title */
 .research-scroll article h3 {
-    margin: 0 0 15px 0;
-    font-size: 20px;
+  font: 500 23px/1.1 "Space Grotesk";
+  margin: 70px 0 15px;
 }
 
-/* Text */
+/* Description */
 .research-scroll article p {
-    margin: 0;
-    line-height: 1.6;
-    color: #aebbc8;
+  color: #aab5b0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* Scroll bar */
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
 .research-scroll::-webkit-scrollbar {
-    height: 6px;
+  height: 8px;
 }
 
 .research-scroll::-webkit-scrollbar-track {
-    background: rgba(255,255,255,0.06);
-    border-radius: 10px;
+  background: #29312f;
 }
 
 .research-scroll::-webkit-scrollbar-thumb {
-    background: #55d6be;
-    border-radius: 10px;
+  background: #9fda58;
+  border-radius: 10px;
 }
 
 .research-scroll::-webkit-scrollbar-thumb:hover {
-    background: #7ae5d1;
+  background: #b8ef63;
 }
 
 /* Firefox */
 .research-scroll {
-    scrollbar-width: thin;
-    scrollbar-color: #55d6be rgba(255,255,255,0.06);
+  scrollbar-width: thin;
+  scrollbar-color: #9fda58 #29312f;
 }
