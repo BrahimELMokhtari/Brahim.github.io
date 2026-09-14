@@ -97,3 +97,134 @@
   scrollbar-width: thin;
   scrollbar-color: #9fda58 #29312f;
 }
+
+/* =====================================
+   NEWS ON OPENING / HERO PAGE
+   ===================================== */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+
+/* News container */
+
+.hero-news {
+  position: relative;
+
+  padding: 30px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.025);
+
+  max-width: 430px;
+
+  box-sizing: border-box;
+}
+
+
+/* Header */
+
+.news-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 30px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+
+  color: #9fda58;
+}
+
+
+.news-dot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #9fda58;
+
+  box-shadow: 0 0 12px rgba(159,218,88,.7);
+}
+
+
+/* Individual news */
+
+.hero-news-item {
+  padding: 0 0 25px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+
+.hero-news-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+.hero-news-date {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+
+  color: #8d9893;
+}
+
+
+.hero-news-item h3 {
+  margin: 8px 0 10px;
+
+  font: 500 20px/1.2 "Space Grotesk", sans-serif;
+}
+
+
+.hero-news-item p {
+  margin: 0 0 12px;
+
+  color: #aab5b0;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+.hero-news-item a {
+  color: #9fda58;
+
+  font-size: 12px;
+
+  text-decoration: none;
+}
+
+
+.hero-news-item a:hover {
+  text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .hero-news {
+    max-width: 100%;
+  }
+
+}
